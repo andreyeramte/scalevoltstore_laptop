@@ -11,6 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.join(__dirname, 'src'),
+      '@services': path.join(__dirname, 'src', 'services'),
     },
   },
   build: {

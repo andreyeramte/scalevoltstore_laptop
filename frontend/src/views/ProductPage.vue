@@ -119,7 +119,7 @@
 
 <script>
 import { useCartStore } from '@/stores/cart';
-import { productService } from '@/services/productService';
+import productService from '@services/productService';
 
 export default {
   name: "ProductPage",
@@ -133,6 +133,7 @@ export default {
     };
   },
 
+  /*
   created() {
     // Hardcode TWO example products for demonstration
     // So that '/product/1' and '/product/7' both work
@@ -183,11 +184,8 @@ export default {
         ],
       },
     ];
-
-    setup() {
-    const cartStore = useCartStore();
-    return { cartStore };
   },
+   */
   async created() {
     try {
       const response = await productService.getProductById(this.id);
